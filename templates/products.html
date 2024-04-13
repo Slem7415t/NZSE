@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>НЗСЭ | Товары</title>
+
+    <link rel="stylesheet" href="../style.css" />
+    <script type="module" src="../script.js" defer></script>
+  </head>
+  <body>
+    <header class="container">
+      <div class="logo">
+        <a href="/">
+          <img style="width: 100%" src="../assets/images/logo.png" alt="logo" />
+        </a>
+      </div>
+      <nav class="desktop">
+        <a class="activ" href="../templates/products.html">ТОВАРЫ</a
+        ><a href="../templates/services.html">УСЛУГИ</a
+        ><a href="../templates/contacts.html">КОНТАКТЫ</a>
+      </nav>
+      <div class="header-contacts">
+        <div class="header-contacts__wa">
+          <a href="">
+            <svg class="icon-WA">
+              <use xlink:href="../assets/sprite.svg#iconWA"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="header-contacts__tel">
+          <a href="">
+            <svg class="icon-tel">
+              <use xlink:href="../assets/sprite.svg#iconTel"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <!-- мобильное меню -->
+      <div class="mobil-menu">
+        <input
+          class="mobil-menu__btn_checkbox"
+          type="checkbox"
+          id="mobilMenuBtn"
+        />
+        <label class="mobil-menu__btn_hamburger" for="mobilMenuBtn">
+          <span class="hamburger-line"></span>
+        </label>
+        <nav class="mobil-menu__link">
+          <a class="activ" href="../templates/products.html">ТОВАРЫ</a>
+          <a href="../templates/services.html">УСЛУГИ</a>
+          <a href="../templates/contacts.html">КОНТАКТЫ</a>
+          <div class="header-contacts-mobil-menu">
+            <div class="header-contacts__tel-mobil">
+              <a href="">
+                <svg class="icon-tel-mobil">
+                  <use xlink:href="../assets/sprite.svg#iconTel"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="header-contacts__wa-mobil">
+              <a href="">
+                <svg class="icon-WA-mobil">
+                  <use xlink:href="../assets/sprite.svg#iconWA"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <article class="container products">
+        <nav class="breadcrumbs breadcrumbs-products">
+          <a href="/">Главная&nbsp;</a>
+          <a href="../templates/products.html">-&nbsp;Товары</a>
+        </nav>
+        <section>
+          <h2 class="h2-page electrodesBtn">ЭЛЕКТРОДЫ<span> &darr;</span></h2>
+          <div class="products-cards electrodesCards">
+            <div class="products-cards__card">
+              <div class="products-cards__box-img">
+                <img
+                  src="../assets/images/product/product1.jpg"
+                  alt="product1"
+                />
+              </div>
+              <a href="../templates/products-card.html">АНО-21</a>
+            </div>
+            <div class="products-cards__card">
+              <div class="products-cards__box-img">
+                <img
+                  src="../assets/images/product/product2.jpg"
+                  alt="product2"
+                />
+              </div>
+              <a href="../templates/products-card.html">МР-3</a>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2 class="h2-page wireBtn">ПРОВОЛОКА<span> &darr;</span></h2>
+          <div class="products-cards wireCards">
+            <div class="products-cards__card">
+              <div class="products-cards__box-img">
+                <img
+                  src="../assets/images/product/product3.png"
+                  alt="product3"
+                />
+              </div>
+              <a href="../templates/products-card.html">Сварочная</a>
+            </div>
+            <div class="products-cards__card">
+              <div class="products-cards__box-img">
+                <img
+                  src="../assets/images/product/product4.jpg"
+                  alt="product4"
+                />
+              </div>
+              <a href="../templates/products-card.html">Нержавеющая</a>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2 class="h2-page rodsBtn">ПРУТКИ<span> &darr;</span></h2>
+          <div class="products-cards rodsCards">
+            <div class="products-cards__card">
+              <div class="products-cards__box-img">
+                <img
+                  src="../assets/images/product/product5.png"
+                  alt="product5"
+                />
+              </div>
+              <a href="../templates/products-card.html">Св-08Г2С</a>
+            </div>
+            <div class="products-cards__card">
+              <div class="products-cards__box-img">
+                <img
+                  src="../assets/images/product/product6.png"
+                  alt="product6"
+                />
+              </div>
+              <a href="../templates/products-card.html">Нержавеющие</a>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer>
+      <div class="footer-box container">
+        <div class="footer__left">
+          <p>&copy;&nbsp;Все&nbsp;права&nbsp;защищены. ООО&nbsp;«НЗСЭ»</p>
+        </div>
+        <div class="footer__right">
+          <a href="mail:info@ooonzse.ru">info@ooonzse.ru</a>
+        </div>
+      </div>
+    </footer>
+    <!-- мобильные кнопки контактов -->
+    <div class="header-contacts-mobil">
+      <div class="header-contacts__tel-mobil">
+        <a href="">
+          <svg class="icon-tel-mobil">
+            <use xlink:href="../assets/sprite.svg#iconTel"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="header-contacts__wa-mobil">
+        <a href="">
+          <svg class="icon-WA-mobil">
+            <use xlink:href="../assets/sprite.svg#iconWA"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

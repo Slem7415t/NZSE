@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+    <meta name="keywords" content="#" />
+    <meta name="description" content="#" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="container">
+      <div class="logo">
+        <a href="/">
+          <img style="width: 100%" src="assets/images/logo.png" alt="logo" />
+        </a>
+      </div>
+      <nav class="desktop">
+        <a href="templates/products.html">ТОВАРЫ</a
+        ><a href="templates/services.html">УСЛУГИ</a
+        ><a href="templates/contacts.html">КОНТАКТЫ</a>
+      </nav>
+      <div class="header-contacts">
+        <div class="header-contacts__wa">
+          <a href="">
+            <svg class="icon-WA">
+              <use xlink:href="assets/sprite.svg#iconWA"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="header-contacts__tel">
+          <a href="">
+            <svg class="icon-tel">
+              <use xlink:href="assets/sprite.svg#iconTel"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <!-- мобильное меню -->
+      <div class="mobil-menu">
+        <input
+          class="mobil-menu__btn_checkbox"
+          type="checkbox"
+          id="mobilMenuBtn"
+        />
+        <label class="mobil-menu__btn_hamburger" for="mobilMenuBtn">
+          <span class="hamburger-line"></span>
+        </label>
+        <nav class="mobil-menu__link">
+          <a href="templates/products.html">ТОВАРЫ</a>
+          <a href="templates/services.html">УСЛУГИ</a>
+          <a href="templates/contacts.html">КОНТАКТЫ</a>
+          <div class="header-contacts-mobil-menu">
+            <div class="header-contacts__tel-mobil">
+              <a href="">
+                <svg class="icon-tel-mobil">
+                  <use xlink:href="assets/sprite.svg#iconTel"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="header-contacts__wa-mobil">
+              <a href="">
+                <svg class="icon-WA-mobil">
+                  <use xlink:href="assets/sprite.svg#iconWA"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="error-box-content">
+        <h1>Ошибка 404</h1>
+        <p>Страница не найдена</p>
+        <a href="/">На главную</a>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-box container">
+        <div class="footer__left">
+          <p>&copy;&nbsp;Все&nbsp;права&nbsp;защищены. ООО&nbsp;«НЗСЭ»</p>
+        </div>
+        <div class="footer__right">
+          <a href="mail:info@ooonzse.ru">info@ooonzse.ru</a>
+        </div>
+      </div>
+    </footer>
+    <!-- мобильные кнопки контактов -->
+    <div class="header-contacts-mobil">
+      <div class="header-contacts__tel-mobil">
+        <a href="">
+          <svg class="icon-tel-mobil">
+            <use xlink:href="assets/sprite.svg#iconTel"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="header-contacts__wa-mobil">
+        <a href="">
+          <svg class="icon-WA-mobil">
+            <use xlink:href="assets/sprite.svg#iconWA"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

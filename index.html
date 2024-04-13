@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>НЗСЭ</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="container">
+      <div class="logo">
+        <a href="/">
+          <img style="width: 100%" src="assets/images/logo.png" alt="logo" />
+        </a>
+      </div>
+      <nav class="desktop">
+        <a href="templates/products.html">ТОВАРЫ</a>
+        <a href="templates/services.html">УСЛУГИ</a>
+        <a href="templates/contacts.html">КОНТАКТЫ</a>
+      </nav>
+      <div class="header-contacts">
+        <div class="header-contacts__wa">
+          <a href="">
+            <svg class="icon-WA">
+              <use xlink:href="assets/sprite.svg#iconWA"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="header-contacts__tel">
+          <a href="">
+            <svg class="icon-tel">
+              <use xlink:href="assets/sprite.svg#iconTel"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <!-- мобильное меню -->
+      <div class="mobil-menu">
+        <input
+          class="mobil-menu__btn_checkbox"
+          type="checkbox"
+          id="mobilMenuBtn"
+        />
+        <label class="mobil-menu__btn_hamburger" for="mobilMenuBtn">
+          <span class="hamburger-line"></span>
+        </label>
+        <nav class="mobil-menu__link">
+          <a href="templates/products.html">ТОВАРЫ</a>
+          <a href="templates/services.html">УСЛУГИ</a>
+          <a href="templates/contacts.html">КОНТАКТЫ</a>
+          <div class="header-contacts-mobil-menu">
+            <div class="header-contacts__tel-mobil">
+              <a href="">
+                <svg class="icon-tel-mobil">
+                  <use xlink:href="assets/sprite.svg#iconTel"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="header-contacts__wa-mobil">
+              <a href="">
+                <svg class="icon-WA-mobil">
+                  <use xlink:href="assets/sprite.svg#iconWA"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <article>
+        <section class="home-banner container">
+          <div class="banner-header">
+            <h1>НОВОЧЕРКАССКИЙ ЗАВОД СВАРОЧНЫХ ЭЛЕКТРОДОВ</h1>
+            <button id="btnOpenForm1">СВЯЗАТЬСЯ</button>
+          </div>
+          <div class="banner-gallery">
+            <div class="banner-gallery__imgs">
+              <img src="/assets/images/home-banner1.jfif" alt="foto1" />
+              <img src="/assets/images/home-banner2.jfif" alt="foto2" />
+              <img src="/assets/images/home-banner3.jfif" alt="foto3" />
+            </div>
+            <a class="banner-link" href="templates/products.html">КАТАЛОГ</a>
+            <div class="banner-gallery__description">
+              <p>
+                Одно из крупнейших предприятий Юга России по производству
+                высоко-качественных сварочных электродов различных марок АНО-21,
+                УОНИ, МР-3. А также сварочной и нержавеющей проволоки.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="home-dignities container">
+          <div class="home-dignities__1">
+            <h2 class="home-dignities-h2">
+              300 ТОНН ЭЛЕКТРОДОВ И&nbsp;ПРОВОЛОКИ В МЕСЯЦ
+            </h2>
+            <div class="home-dignities__1-img">
+              <img src="/assets/images/dignities1.jfif" alt="dignities1" />
+            </div>
+            <p class="home-dignities-p">диаметром от 2,5 до 3,0 мм.</p>
+          </div>
+          <div class="home-dignities__2">
+            <div class="home-dignities__2-img">
+              <img src="/assets/images/dignities2.jfif" alt="dignities2" />
+            </div>
+            <div class="home-dignities__2-description">
+              <h2 class="home-dignities-h2">
+                СОВРЕМЕННЫЕ ЛИНИИ ОБОРУДОВАНИЯ И СТРОГИЙ КОНТРОЛЬ КАЧЕСТВА
+              </h2>
+              <p class="desc home-dignities-p">
+                делают нашу продукцию востребованной в строительстве,
+                энергетике, химической промышленности, машиностроении, и в
+                сельском хозяйстве.
+              </p>
+            </div>
+            <p class="mb home-dignities-p">
+              делают нашу продукцию востребованной в строительстве, энергетике,
+              химической промышленности, машиностроении, и в сельском хозяйстве.
+            </p>
+          </div>
+          <div class="home-dignities__3">
+            <div class="home-dignities__3-description">
+              <h2 class="home-dignities-h2">ГЕОГРАФИЯ ПОСТАВОК</h2>
+              <p class="p-first home-dignities-p">
+                Московская область Краснодарский край Ставропольский край
+                Волгоградская область Воронежская область Ростовская область
+              </p>
+              <p class="p-last home-dignities-p">
+                Кабардино-Балкарская Республика Карачаево-Черкесская Республика
+                РСО-Алания Республика Дагестан Чеченская Республика Республика
+                Ингушетия
+              </p>
+            </div>
+            <div class="home-dignities__3-img">
+              <img src="/assets/images/dignities3.jpeg" alt="dignities3" />
+            </div>
+          </div>
+          <div class="home-dignities__4">
+            <h2 class="home-dignities-h2">СООТВЕТСТВИЕ ГОСТ</h2>
+            <div class="home-dignities__4-img">
+              <img src="/assets/images/dignities4.jfif" alt="dignities4" />
+            </div>
+
+            <p class="home-dignities-p">
+              Вся выпускаемая заводом продукция сертифицирована по системе
+              ГОСТ-Р и регулярно проходит контроль качества. Коллектив завода
+              сформирован из высококвалифицированных специалистов, имеющих
+              большой опыт по производству сварочных материалов.
+            </p>
+          </div>
+          <div class="home-dignities__5">
+            <div class="home-dignities__5-header">
+              <h2 class="home-dignities-h2">
+                НЕ СТОИМ НА МЕСТЕ<br />И РАСШИРЯЕМ ПРОИЗВОДСТВО
+              </h2>
+              <div class="home-dignities__5-1-img">
+                <img
+                  src="/assets/images/dignities5-1.jfif"
+                  alt="dignities5.1"
+                />
+              </div>
+              <p class="home-dignities-p">
+                В настоящее время на заводе постороены новые складские
+                помещения, осваивается выпуск других марок электродов. При этом
+                планируется увеличение мощности производства на 30-40%.
+              </p>
+            </div>
+            <div class="home-dignities__5-footer">
+              <p class="up__5 home-dignities-p">
+                Данные марки электродов применяются для сварки чугуна,
+                нержавеющей стали и алюминия.
+              </p>
+              <div class="home-dignities__5-2-img">
+                <img
+                  src="/assets/images/dignities5-2.jfif"
+                  alt="dignities5.2"
+                />
+              </div>
+              <div class="home-dignities__5-2-description">
+                <p class="home-dignities-p">
+                  В ближайшее время планируется установить новую линию по
+                  выпуску электродов марок ЦЛ-11, ЦЧ-4, ОЗС.
+                </p>
+                <p class="down__5 home-dignities-p">
+                  Данные марки электродов применяются для сварки чугуна,
+                  нержавеющей стали и алюминия.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="home-dignities__6">
+            <h2 class="home-dignities-h2">600 ТОНН СКЛАДСКИХ ЗАПАСОВ</h2>
+            <div class="home-dignities__6-img">
+              <img src="/assets/images/dignities6.jfif" alt="dignities6" />
+            </div>
+            <p class="home-dignities-p">
+              Что позволяет оперативно отгружать необходимое количество
+              продукции и предлагать выгодные конкурентоспособные цены.
+            </p>
+          </div>
+          <div class="home-dignities__7">
+            <h2>
+              ВЫБИРАЯ ПРОДУКЦИЮ НЗСЭ, ВЫ ВЫБИРАЕТЕ <b>КАЧЕСТВО И НАДЁЖНОСТЬ</b>.
+            </h2>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer>
+      <div class="footer-box container">
+        <div class="footer__left">
+          <p>&copy;&nbsp;Все&nbsp;права&nbsp;защищены. ООО&nbsp;«НЗСЭ»</p>
+        </div>
+        <div class="footer__right">
+          <a href="mail:info@ooonzse.ru">info@ooonzse.ru</a>
+        </div>
+      </div>
+    </footer>
+    <!-- мобильные кнопки контактов -->
+    <div class="header-contacts-mobil">
+      <div class="header-contacts__tel-mobil">
+        <a href="">
+          <svg class="icon-tel-mobil">
+            <use xlink:href="assets/sprite.svg#iconTel"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="header-contacts__wa-mobil">
+        <a href="">
+          <svg class="icon-WA-mobil">
+            <use xlink:href="assets/sprite.svg#iconWA"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <!-- модальное окно обратной связи -->
+    <div class="modal-background">
+      <div class="card-box-form">
+        <button class="close-form">&times;</button>
+        <h2 class="form-title">
+          Напишите нам и мы свяжемся с&nbsp;вами в ближайшее время
+        </h2>
+        <div class="form-title-mobil">
+          <h2>Напишите нам</h2>
+          <p>Мы&nbsp;свяжемся&nbsp;с&nbsp;вами в&nbsp;ближайшее&nbsp;время</p>
+        </div>
+        <form action="#" method="post">
+          <label for="telForm">Номер телефона</label>
+          <input
+            type="tel"
+            id="telForm"
+            value=""
+            name="tel"
+            placeholder="+ 7(000) 000 - 00 - 00"
+          />
+          <label for="nameForm">Ваше имя</label>
+          <input type="text" id="nameForm" value="" name="name" />
+          <button class="form-btn">Свяжитесь со мной</button>
+        </form>
+        <p class="form-footer">
+          Нажимая на кнопку «Отправить», вы подтверждаете, что ознакомились с
+          <a href="">Условиями обработки персональных данных</a> и принимаете их
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
