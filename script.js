@@ -1,43 +1,44 @@
-if(document.querySelector('#dotProdImg1')) {
-    document.querySelector('#dotProdImg1').onclick = () => {
-        document.querySelector('#ProdImg1').style.display = 'flex';
-        document.querySelector('#ProdImg2').style.display = 'none';
-        document.querySelector('#ProdImg3').style.display = 'none';
+/**
+ * слайдер карточки товара
+ */
+if(document.querySelector('.card-product-detailed__dots')) {
+    const imgsProduct = document.querySelectorAll('.card-product-detailed__img>img');
+    document.querySelector('.card-product-detailed__dots').onclick = (e) => {
+        for(let img of imgsProduct) {
+            img.style.display = 'none';
+            if(img.dataset.number == e.target.dataset.number){
+                img.style.display = 'flex';
+            }
+        }
         let dots = document.querySelectorAll('.dot');
         for(let dot of dots) {
-            console.log(dot);
             dot.classList.remove('dot-activ');
         }
-        document.querySelector('#dotProdImg1').classList.add('dot-activ');
-    }
-}
-if(document.querySelector('#dotProdImg2')) {
-    document.querySelector('#dotProdImg2').onclick = () => {
-        document.querySelector('#ProdImg1').style.display = 'none';
-        document.querySelector('#ProdImg2').style.display = 'flex';
-        document.querySelector('#ProdImg3').style.display = 'none';
-        let dots = document.querySelectorAll('.dot');
-        for(let dot of dots) {
-            console.log(dot);
-            dot.classList.remove('dot-activ');
-        }
-        document.querySelector('#dotProdImg2').classList.add('dot-activ');
-    }
-}
-if(document.querySelector('#dotProdImg3')) {
-    document.querySelector('#dotProdImg3').onclick = () => {
-        document.querySelector('#ProdImg1').style.display = 'none';
-        document.querySelector('#ProdImg2').style.display = 'none';
-        document.querySelector('#ProdImg3').style.display = 'flex';
-        let dots = document.querySelectorAll('.dot');
-        for(let dot of dots) {
-            console.log(dot);
-            dot.classList.remove('dot-activ');
-        }
-        document.querySelector('#dotProdImg3').classList.add('dot-activ');
+        e.target.classList.add('dot-activ');
     }
 }
 
+/**
+ * модальное окно картинки слайдера
+ */
+if(document.querySelector('.card-product-detailed__img')) {
+    const imgModalForm = document.querySelector('.img-form__img-box>img');
+    document.querySelector('.card-product-detailed__img').onclick = (e) => {
+        imgModalForm.setAttribute('src', e.target.getAttribute('src'));
+        document.querySelector('.img-form').style.display = 'flex';
+        document.querySelector('html').classList.add('no-scroll');
+    }
+}
+function formImgClose(){
+    document.querySelector('.img-form').style.display = 'none';
+    document.querySelector('html').classList.remove('no-scroll');
+}
+
+if(document.querySelector('.close__img-form')) {document.querySelector('.close__img-form').onclick = formImgClose;}
+
+/**
+ * функции открытия и закрытия модального окна обратной связи
+ */
 function formOrderOpen(){
     document.querySelector('.modal-background').style.display = 'flex';
     document.querySelector('html').classList.add('no-scroll');
@@ -46,49 +47,51 @@ function formOrderClose(){
     document.querySelector('.modal-background').style.display = 'none';
     document.querySelector('html').classList.remove('no-scroll');
 }
+
 if(document.querySelector('.close-form')) {document.querySelector('.close-form').onclick = formOrderClose;}
-if(document.querySelector('#btnOpenForm1')) {document.querySelector('#btnOpenForm1').onclick = formOrderOpen;}
-if(document.querySelector('#btnOpenForm2')) {document.querySelector('#btnOpenForm2').onclick = formOrderOpen;}
-if(document.querySelector('#btnOpenForm3')) {document.querySelector('#btnOpenForm3').onclick = formOrderOpen;}
-
-if(document.querySelector('#btnNovochercask')) {
-    document.querySelector('#btnNovochercask').onclick = () => {
-        document.querySelector('.region-novochercask').style.display = 'block';
-        document.querySelector('.region-georgievsk').style.display = 'none';
-        document.querySelector('#btnNovochercask').classList.add('act-btn-contact-region');
-        document.querySelector('#btnGeorgievsk').classList.remove('act-btn-contact-region');
-    }
-}
-if(document.querySelector('#btnGeorgievsk')) {
-    document.querySelector('#btnGeorgievsk').onclick = () => {
-        document.querySelector('.region-novochercask').style.display = 'none';
-        document.querySelector('.region-georgievsk').style.display = 'block';
-        document.querySelector('#btnGeorgievsk').classList.add('act-btn-contact-region');
-        document.querySelector('#btnNovochercask').classList.remove('act-btn-contact-region');
+if(document.querySelector('.btnOpenForm')) {
+    let btnsOpenForm = document.querySelectorAll('.btnOpenForm');
+    for(let btnOpenForm of btnsOpenForm) {
+        btnOpenForm.onclick = formOrderOpen;
     }
 }
 
+/**
+ * выбор региона в контактах
+ */
+if(document.querySelector('.button-contact-region')) {
+    document.querySelector('.button-contact-region').onclick = (e) => {
+        const btnRegions = document.querySelectorAll('.button-contact-region button');
+        for(let btnRegion of btnRegions) {
+            btnRegion.style.display = 'none';
+        }
+        if(document.querySelector('.button-contact-region button')) {
+            e.target.style.display = 'block';
+        }
+    }
+}
+
+/**
+ * список категорий на странице товаров в мобильном расширении
+ */
 if(document.querySelector('.products')) {
-    let electrodesBtn = document.querySelector('.electrodesBtn'),
-        wireBtn = document.querySelector('.wireBtn'),
-        rodsBtn = document.querySelector('.rodsBtn');
-
-    electrodesBtn.onclick = () => {
-        let electrodesCards = document.querySelector('.electrodesCards');
-    
-        electrodesCards.classList.toggle('products-cards__close');
-        electrodesBtn.classList.toggle('h2-page-mob');
-    }
-    wireBtn.onclick = () => {
-        let wireCards = document.querySelector('.wireCards');
-    
-        wireCards.classList.toggle('products-cards__close');
-        wireBtn.classList.toggle('h2-page-mob');
-    }
-    rodsBtn.onclick = () => {
-        let rodsCards = document.querySelector('.rodsCards');
-    
-        rodsCards.classList.toggle('products-cards__close');
-        rodsBtn.classList.toggle('h2-page-mob');
+    document.querySelector('.products').onclick = (e) => {
+        const productCards = document.querySelectorAll('.products-cards'),
+              productCardsH2 = document.querySelectorAll('.h2-page');
+        for(let productCardH2 of productCardsH2) {
+            if (productCardH2 == e.target) {
+                e.target.classList.toggle("h2-page-mob");
+            } else {
+                productCardH2.classList.remove("h2-page-mob");
+            }   
+        }
+        for(let productCard of productCards) {
+            if(productCard.dataset.number != e.target.dataset.number){
+                productCard.classList.remove("products-cards__close");
+            }
+            if(productCard.dataset.number == e.target.dataset.number){
+                productCard.classList.toggle('products-cards__close');
+            }
+        }      
     }
 }

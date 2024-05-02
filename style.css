@@ -988,9 +988,9 @@ article.products {
   .h2-page-mob:hover {
     color: var(--gray);
   }
-  .products-cards__close.electrodesCards,
-  .products-cards__close.wireCards,
-  .products-cards__close.rodsCards {
+  .products-cards__close,
+  .products-cards__close,
+  .products-cards__close {
     display: flex;
   }
 }
@@ -1059,6 +1059,7 @@ article.products {
 .card-product-detailed__img>img {
   width: 100%;
   display: none;
+  cursor: pointer;
 }
 
 .card-product-detailed__img>img:first-child {
@@ -2052,10 +2053,56 @@ article.contacts {
     line-height: 27px;
   }
 }
-/* < ГЛАВНАЯ > */
+/* < ГЛАВНАЯ*/
 
 @media (max-width: 1190px) {
   main {
     padding: 0 10px;
   }
 }
+/* МОДАЛЬНОЕ ОКНО КАРТИНКИ ТОВАРА > */
+.img-form {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  /* top: 0;
+  bottom: 0; */
+  /* left: 0;
+  right: 0; */
+  z-index: 20;
+  padding: 20px;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.close__img-form {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 44px;
+  height: 44px;
+  font-size: 24px;
+  color: var(--black);
+  border: none;
+  background-color: transparent;
+  font-weight: lighter;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.close__img-form:hover {
+  color: var(--gray);
+}
+
+.img-form__img-box>img {
+  height: 100%;
+}
+
+.img-form__img-box {
+  height: 100%;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+/* < МОДАЛЬНОЕ ОКНО КАРТИНКИ ТОВАРА */
