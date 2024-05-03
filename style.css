@@ -988,8 +988,6 @@ article.products {
   .h2-page-mob:hover {
     color: var(--gray);
   }
-  .products-cards__close,
-  .products-cards__close,
   .products-cards__close {
     display: flex;
   }

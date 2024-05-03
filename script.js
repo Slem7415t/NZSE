@@ -61,12 +61,14 @@ if(document.querySelector('.btnOpenForm')) {
  */
 if(document.querySelector('.button-contact-region')) {
     document.querySelector('.button-contact-region').onclick = (e) => {
-        const btnRegions = document.querySelectorAll('.button-contact-region button');
-        for(let btnRegion of btnRegions) {
-            btnRegion.style.display = 'none';
-        }
-        if(document.querySelector('.button-contact-region button')) {
-            e.target.style.display = 'block';
+        const regionsBox = document.querySelectorAll('.region-box');
+        if(document.querySelector('.button-contact-region__btn')) {
+            for(let regionBox of regionsBox) {
+                regionBox.style.display = 'none';
+                if(regionBox.dataset.number == e.target.dataset.number){
+                    regionBox.style.display = 'block';
+                }
+            }
         }
     }
 }
