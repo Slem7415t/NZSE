@@ -61,7 +61,8 @@ if(document.querySelector('.btnOpenForm')) {
  */
 if(document.querySelector('.button-contact-region')) {
     document.querySelector('.button-contact-region').onclick = (e) => {
-        const regionsBox = document.querySelectorAll('.region-box');
+        const regionsBox = document.querySelectorAll('.region-box'),
+              btnRegionsBox = document.querySelectorAll('.act-btn-contact-region');
         if(document.querySelector('.button-contact-region__btn')) {
             for(let regionBox of regionsBox) {
                 regionBox.style.display = 'none';
@@ -70,6 +71,10 @@ if(document.querySelector('.button-contact-region')) {
                 }
             }
         }
+        for(let btnRegion of btnRegionsBox) {
+            btnRegion.classList.remove('act-btn-contact-region');
+        }
+        e.target.classList.add('act-btn-contact-region');
     }
 }
 
