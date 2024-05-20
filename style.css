@@ -1128,13 +1128,32 @@ div.dot.dot-activ {
   text-align: center;
 }
 
+.card-product-detailed__description-footer {
+  display: flex;
+  gap: 112px;
+}
+
+.card-product-detailed__description-footer .dignities__3-box-icons {
+  margin: 0;
+}
+
+.card-product-detailed__description-footer .dignities__3-box-icons p {
+  font-family: 'Gothic A1';
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  text-align: left;
+}
+
+.card-product-detailed__description-footer>div>p,
 .card-product-detailed__description-footer>p {
   font-family: "Gothic A1", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
   letter-spacing: 0.05em;
-  margin-bottom: 10px;
+  margin-top: 10px;
   color: var(--gray);
 }
 
@@ -1142,6 +1161,7 @@ div.dot.dot-activ {
   margin-bottom: 10px;
 }
 
+.card-product-detailed__description-footer>div>a,
 .card-product-detailed__description-footer>a {
   display: flex;
   align-items: center;
@@ -1158,6 +1178,7 @@ div.dot.dot-activ {
   max-width: 378px;
 }
 
+.card-product-detailed__description-footer>div>a:hover,
 .card-product-detailed__description-footer>a:hover {
   color: var(--gray)
 }
@@ -1195,6 +1216,7 @@ div>div.card-product-detailed__description-down {
   .card-product-delivery>div {
     display: block;
   }
+  .card-product-detailed__description-header>div>p,
   .card-product-detailed__description-header>p {
     display: none;
   }
@@ -1207,6 +1229,7 @@ div>div.card-product-detailed__description-down {
   .card-product-detailed__info:first-child {
     width: 214px;
   }
+  .card-product-detailed__description-footer>div>a,
   .card-product-detailed__description-footer>a {
     max-width: 244px;
   }
@@ -1215,6 +1238,16 @@ div>div.card-product-detailed__description-down {
   }
   .card-product-detailed__infos {
     gap: 10px;
+  }
+}
+
+@media (max-width: 834px) {
+  .card-product-detailed__description-footer .dignities__3-icons>a {
+    width: 50px;
+    height: 50px;
+  }
+  .card-product-detailed__description-footer {
+    gap: 62px;
   }
 }
 
@@ -1257,7 +1290,6 @@ div>div.card-product-detailed__description-down {
     margin-bottom: 0;
   }
   div>div.card-product-detailed__description-down {
-    margin-top: 30px;
     margin-bottom: 0;
     display: flex;
     flex-direction: column;
@@ -1265,9 +1297,17 @@ div>div.card-product-detailed__description-down {
     justify-content: center;
     gap: 10px;
   }
+  .card-product-detailed__description-footer>div>a,
   .card-product-detailed__description-footer>a {
     width: 100%;
     max-width: 100%;
+  }
+  .card-product-delivery .dignities__3-box-icons {
+    margin: 30px 0;
+  }
+  .dignities__3-box-icons-mob {
+    display: flex;
+    width: 100%;
   }
 }
 /* < ТОВАРЫ | ДЕТАЛЬНО */
@@ -1786,7 +1826,7 @@ article.contacts {
   justify-content: center;
 }
 
-.p-first {
+p.p-first {
   width: 169px;
   margin: 0 auto 0 0;
   font-size: 14px;
@@ -1796,7 +1836,7 @@ article.contacts {
   text-align: left;
 }
 
-.p-last {
+p.p-last {
   width: 261px;
   margin: 0 0 0 172px;
   font-size: 14px;
@@ -1993,7 +2033,7 @@ article.contacts {
     margin: 0 0 25px;
     min-width: 375px;
   }
-  .p-last {
+  p.p-last {
     margin: 50px 0 0;
   }
   .home-dignities__4 {
