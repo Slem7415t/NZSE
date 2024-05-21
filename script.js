@@ -102,3 +102,16 @@ if(document.querySelector('.products')) {
         }      
     }
 }
+
+/**
+ * активные кнопки хедер mobil-menu__link
+ */
+if(document.querySelector('.mobil-menu__link')) {
+    document.querySelector('.desktop').onclick = (e) => {
+        const headerLinks = document.querySelectorAll('.desktop>a');
+        for(let headerLink of headerLinks) {
+            headerLink.style.color = '#636161';
+        }
+        e.target.style.color = '#2E29C8';
+    }
+}
